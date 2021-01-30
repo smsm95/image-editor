@@ -2,13 +2,13 @@ import React from "react";
 import { Button, Upload } from "antd";
 import { CloudUploadOutlined } from "@ant-design/icons";
 
-const UploadBtn = ({ handleChange }) => {
+const UploadBtn = ({ onChange }) => {
   return (
     <Upload
       accept='image/*'
       multiple={false}
       showUploadList={false}
-      onChange={handleChange}
+      onChange={(info) => onChange(info)}
       beforeUpload={(file) => {
         return false;
       }}>
